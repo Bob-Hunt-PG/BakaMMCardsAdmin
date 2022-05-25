@@ -1,0 +1,707 @@
+@charset "utf-8";
+/* CSS Document */
+html, body {
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+}
+/* OPS OVERWRITE */
+#contenttable {
+	width: 100%;
+	margin: 0;
+}
+blockquote {
+	padding: 0 0 15px;
+	margin: 0;
+	border: none;
+}
+blockquote p {
+	font-size: 17.5px;
+}
+.grouptable input {
+    width: 100%;
+}
+
+.promocode {
+	text-align: right;
+}
+.promocode b {
+    font-size: 16px;
+    padding: 10px 15px;
+    color: #ff0000;
+}
+.promocode #promocode {
+    padding: 6px 12px;
+}
+#applypromotion {
+    width: 100%;
+    border-radius: 0;
+}
+a:link, a:visited {
+	font-weight: normal;
+	font-family: sans-serif;
+}
+#mastertitle {
+    border-bottom: 5px solid #00A3E0;
+    padding: 15px 0px;
+    margin: 15px 0px 15px;
+}
+#contenttable > tbody > tr > td > table {
+	width: 100%;
+}
+#contenttable .bordertable > tbody > tr td > table > tbody > tr > td {
+	width: 130px;
+    float: left;
+}
+#contenttable .bordertable > tbody > tr td > table > tbody > tr > td.bordertableheader {
+    float: none;
+}
+td[nowrap][width="100%"] {
+    border-right: 1px solid #AFC2CC;
+}
+.nexjobdescription {
+    display: block;
+	margin-bottom: 15px;
+}
+.nexjoboptions {
+    display: block;
+    width: 100%;
+}
+#proofTable {
+    width: 100%;
+}
+#proofTable > tbody > tr > td > table {
+    width: 100%;
+}
+#proofTable > tbody > tr > td > table > tbody tr > td[valign="top"] > .bordertable > tbody tr > td > table > tbody > tr > td > table > tbody > tr > td[nowrap] {
+    width: 100%;
+    border-bottom: 2px solid #DB002A;
+    display: block;
+}
+#proofTable > tbody > tr > td > table > tbody tr > td[valign="top"] > .bordertable > tbody tr > td > table > tbody > tr > td {
+    width: 100%;
+    display: block;
+}
+#proofTable .labelgrouptext {
+    text-align: right;
+    color: #FF0000;
+}
+#proofTable .labelgrouptext p {
+    font-size: 14px;
+}
+#btnCart, #btnSubmit, input[name="btnSubmit"] {
+    background: #DB002A;
+    color: #FFFFFF;
+    float: right;
+    padding: 5px 25px;
+    border-radius: 5px;
+	border: none;
+}
+
+input[name="btnEdit"], #btnBack, #btnSave {
+    background: #DB002A;
+    color: #FFFFFF;
+    float: left;
+    padding: 5px 25px;
+    border-radius: 5px;
+    border: none;
+}
+
+#btnBack {
+	float: none;
+}
+.wrapper .tableheader {
+    border: 1px solid #000;
+    padding: 5px 10px;
+	background: #EBEBEB;
+}
+.wrapper .datatd {
+    border: 1px solid #000;
+    padding: 5px 10px;
+}
+input[name="btnSubmitorder"] {
+    padding: 2px 10px;
+    border: 1px solid #A9A9A9;
+	margin: 0;
+}
+.wrapper #lastcolumn {
+    border-right: 1px solid;
+	border-top: 1px solid;
+}
+.blocklink {
+    font-size: 18px !important;
+}
+.wrapper #firstcolumn {
+    border-left: 1px solid;
+}
+#tabDelDetails input, #tabDelDetails select {
+    margin: 0;
+}
+#tabDelDetails tr > td[colspan="2"] {
+    padding: 0;
+}
+#tabDelDetails .bordertableheader {
+    padding: 5px !important;
+}
+#imgFront, #imgBack {
+    box-shadow: 0px 0px 5px #888888;
+	margin-top: 5px;
+}
+#thumbLP {
+    box-shadow: 0px 0px 5px #888888;
+    margin: 10px 10px 10px 0;
+}
+#thumbBackLP {
+	box-shadow: 0px 0px 5px #888888;
+    margin: 10px 0;
+}
+.labeltext {
+    line-height: 3;
+}
+#legalh1, #privacyh1 {
+    font-family: sans-serif !important;
+    padding: 34px 0px 20px 0px !important;
+    margin: 0 !important;
+    font-size: 36px !important;
+	border-bottom: 5px solid #DB002A;
+    padding: 15px 0px;
+    margin: 15px 0px 15px;
+	color: #333333 !important;
+}
+#legalh2, #privacyh2 {
+    font-family: sans-serif !important;
+	margin-left: 0 !important;
+	margin-right: 0 !important;
+}
+#legalh3, #privacyh3 {
+    font-family: sans-serif !important;
+    font-size: 20px !important;
+	margin-left: 0 !important;
+	margin-right: 0 !important;
+}
+#legalparagraph, #privacyparagraph {
+    line-height: 1.3 !important;
+    font-size: 16px !important;
+    font-family: sans-serif !important;
+	margin-left: 0 !important;
+	margin-right: 0 !important;
+}
+#legalparagraph a, #privacyparagraph a {
+    font-size: 16px !important;
+    font-family: sans-serif !important;
+}
+/* /OPS OVERWRITE */
+#header {
+	background: #FFFFFF;
+}
+.sml-links {
+    list-style: none;
+    text-align: right;
+    margin: 0;
+    margin-right: -15px;
+    padding: 0;
+}
+	.sml-links li {
+		display: inline-block;
+	}
+		.sml-links li a {
+			display: block;
+			padding: 15px 25px;
+			text-transform: uppercase;
+			font-size: 14px;
+		}
+		.sml-links li a.blu {
+			background: #00A3E0;
+			color: #FFFFFF;
+		}
+			.sml-links li a.blu:hover {
+				background: #2ec6ff;
+				text-decoration: none;
+			}
+		.sml-links li a.org {
+			background: #EAAA00;
+			color: #FFFFFF;
+		}
+			.sml-links li a.org:hover {
+				background: #ffc838;
+				text-decoration: none;
+			}
+		
+.navbar {
+	position: inherit;
+}
+	.navbar.navbar-default {
+		background-color: #00293A;
+		text-transform: uppercase;
+		margin-bottom: 0;
+		border-bottom: none;
+	}
+		.navbar #navbar .nav.navbar-nav li a {
+			display: block;
+			color: #FFFFFF;
+			font-size: 15px;
+			padding: 30px;
+		}
+			.navbar #navbar .nav.navbar-nav li a:hover {
+				background: #00A3E0;
+			}
+	.navbar-header .navbar-brand {
+		padding: 30px 30px 30px 15px;
+		color: #FFFFFF;
+		height: auto;
+		font-size: 18px;
+	}
+		.navbar-header .navbar-brand:hover {
+			color: #FFFFFF;
+		}
+
+		.product-container.no-bg {
+			background: #FFFFFF;
+		}
+		.product-container.no-bg .product-header {
+			padding-top: 3px;
+		}
+button.navbar-toggle {
+	margin: 23px;
+}
+#brand {
+    height: 88px;
+    width: 400px;
+    top: 0;
+	margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+    display: block;
+    background: white no-repeat 0 30px;
+    background: url('MMCardslogo.png') no-repeat bottom;
+    background-size: contain;
+	z-index: 1001;
+}
+.main-bg {
+	background: url('homepagebackgroundv2.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position: relative;
+    height: 700px;
+    margin-bottom: 0px;
+    -webkit-transition: all ease-out 1s;
+    -moz-transition: all ease-out 1s;
+    -o-transition: all ease-out 1s;
+    transition: all ease-out 1s;
+    right: 0;
+    padding: 140px 15px;
+}
+	.main-bg h1 {
+		font-size: 60px;
+		color: #FFFFFF;
+		border-bottom: 5px solid #00A3E0;
+		display: inline-block;
+		padding: 20px 0px;
+		text-transform: uppercase;
+	}
+	.main-bg h2 {
+		font-size: 30px;
+		color: #FFFFFF;
+		text-transform: uppercase;
+	}
+.product-container {
+	background: url('bgbluewithicons.jpg') repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position: relative;
+    margin-bottom: 0px;
+    -webkit-transition: all ease-out 1s;
+    -moz-transition: all ease-out 1s;
+    -o-transition: all ease-out 1s;
+    transition: all ease-out 1s;
+    right: 0;
+	padding: 5px 15px 50px;
+}
+	.product-container .product-header {
+		background: url('buribbonbanneryellow.svg') no-repeat center center scroll;
+		-webkit-background-size: 400px;
+		-moz-background-size: 400px;
+		-o-background-size: 400px;
+		height: 65px;
+		position: relative;
+		text-align: center;
+		color: #FFFFFF;
+		line-height: 2.15;
+		font-weight: bold;
+		text-transform: uppercase;
+		font-size: 30px;
+		margin-bottom: 25px;
+		filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+        src='buribbonbanneryellow.svg',
+        sizingMethod='scale');
+		-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='buribbonbanneryellow.svg',sizingMethod='scale')";
+	}
+	
+	.product-container .product-cat {
+		height: 330px;
+		border: 5px solid #00A3E0;
+		text-align: center;
+		color: #333333;
+		text-transform: uppercase;
+		margin-bottom: 15px;
+		-webkit-transition: all ease-out .25s;
+		-moz-transition: all ease-out .25s;
+		-o-transition: all ease-out .25s;
+		transition: all ease-out .25s;
+		position: relative;
+	}
+		.product-container .product-cat:hover {
+			border-color: #00A3E0;
+		}
+		.product-cat a,
+		.product-cat p {
+			background: #00A3E0;
+			color: #FFFFFF;
+			padding: 10px 15px;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			margin: auto;
+			width: 100%;
+		}
+
+		.product-cat h3 {
+			text-decoration: none;
+		}
+			.product-cat a:hover {
+				background: #2ec6ff;
+				text-decoration: none;
+			}
+			
+			.product-cat.printed {
+				background: url('https://prioritypress.mybrandstorefront.com/Files/BrokerBranding/mmcards/Include/PrintedMaterial.png') no-repeat center center scroll;
+				background-color: #FFFFFF;
+				-webkit-background-size: contain;
+				-moz-background-size: contain;
+				-o-background-size: contain;
+				background-size: contain;
+				-webkit-transition: all ease-out 1s;
+				-moz-transition: all ease-out 1s;
+				-o-transition: all ease-out 1s;
+				transition: all ease-out 1s;
+				position: relative;
+			}
+			.product-cat.promo {
+				background: url('https://prioritypress.mybrandstorefront.com/Files/BrokerBranding/mmcards/Include/Promotional.png') no-repeat center center scroll;
+				background-color: #FFFFFF;
+				-webkit-background-size: contain;
+				-moz-background-size: contain;
+				-o-background-size: contain;
+				background-size: contain;
+				-webkit-transition: all ease-out 1s;
+				-moz-transition: all ease-out 1s;
+				-o-transition: all ease-out 1s;
+				transition: all ease-out 1s;
+				position: relative;
+			}
+			.product-cat.apparel {
+				background: url('https://prioritypress.mybrandstorefront.com/Files/BrokerBranding/mmcards/Include/Apparel.png') no-repeat center center scroll;
+				background-color: #FFFFFF;
+				-webkit-background-size: contain;
+				-moz-background-size: contain;
+				-o-background-size: contain;
+				background-size: contain;
+				-webkit-transition: all ease-out 1s;
+				-moz-transition: all ease-out 1s;
+				-o-transition: all ease-out 1s;
+				transition: all ease-out 1s;
+				position: relative;
+			}
+#footer {
+    border-top: 1px solid #00A3E0;
+    padding-top: 10px;
+    margin-top: 10px;
+	position: relative;
+}
+
+.ribbon-one {
+    background: url('buribbonsdownfooter.svg') no-repeat left scroll;
+    -webkit-background-size: 50px;
+    -moz-background-size: 50px;
+    -o-background-size: 50px;
+    background-size: 50px;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    text-align: center;
+    color: #FFFFFF;
+    line-height: 2.15;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 30px;
+    margin-bottom: 25px;
+    top: 0;
+}
+	#footer .footer-container {
+		background: #00293A;
+	}
+		#footer .footer-container span {
+			display: inline-block;
+			color: #FFFFFF;
+			margin: 0;
+			padding: 50px 0px 25px 0px;
+		}
+		
+		#footer .footer-container ul.pull-right {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+			#footer .footer-container ul.pull-right li {
+				display: inline-block;
+				padding: 50px 15px 25px 15px;
+			}
+
+.table.login,
+.table.register {
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid #dddddd;
+}
+
+.table.categories {
+    width: 100%;
+    border: 1px solid #dddddd;
+    margin-top: 50px;
+}
+
+.table.style {
+    border: 1px solid #dddddd;
+}
+
+.table.orderdetails {
+    border: 1px solid #dddddd;
+}
+
+.table.buttons td {
+    border-top: none;
+}
+
+.table.style img {
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid #dddddd;
+}
+
+.style-title {
+    max-width: 100px;
+}
+
+.orderdetails-title {
+    max-width: 31px;
+}
+
+.table.orderdetails td:last-of-type {
+    border-right: 1px solid #dddddd;
+}
+
+.table.login th,
+.table.register th,
+.table.categories th {
+    padding: 16px;
+    background: #ffffff;
+}
+
+.table.login {
+    float: left;
+}
+
+.table.register {
+    float: left;
+    margin: 0 0 0 50px;
+}
+
+.table.login .table tr td,
+.table.register .table tr td {
+    border: none;
+}
+
+.table.login .table tr td input,
+.table.register .table tr td input[type="text"],
+.table.register .table tr td input[type="password"] {
+    width: 100%;
+    padding: 5px 10px;
+    border: 1px solid #dddddd;
+}
+
+.table.register .table tr td input[type="checkbox"] {
+	display: inline-block;
+	margin-left: 10px;
+	vertical-align: inherit;
+}
+
+.table.login .table tr td input.btn,
+.table.register tr td input.btn {
+    border: 2px solid #0092BC;
+    color: #333333;
+    padding: 5px 25px;
+}
+
+.table.login .table tr td input.btn:hover, 
+.table.register tr td input.btn:hover,
+.table.login .table tr td input.btn:focus, 
+.table.register tr td input.btn:focus {
+    background: #ffffff;
+}
+
+.forgot-password {
+    margin-top: 8px;
+    display: block;
+}
+
+#masterhelptext {
+    border: none;
+    padding: 0 0 50px;
+    margin: 0;
+}
+
+#masterhelptext > a {
+	color: #6b3077;
+}
+
+.table.register>tbody>tr>td {
+    border: 1px solid #dddddd;	
+}
+
+.table.categories th:last-of-type {
+    text-align: right;
+}
+
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+	vertical-align: middle;
+}
+.bootstrap-table .table thead>tr>th:last-of-type {
+    width: 100px;
+}
+#tabDelDetails input[type="text"], #tabDelDetails select {
+    padding: 5px 10px;
+    margin: 5px 20px;
+    border: 1px solid #dddddd;
+    width: 100%;
+    max-width: 320px;
+}
+
+.addresslabel ~ td {
+    border: none !important;
+}
+
+#tabDelDetails .bordertableheader ~ .bordertableheader {
+    border: none !important;
+    padding: 20px;
+}
+
+.templatedetails {
+    width: 100%;
+    max-width: 400px;
+    float: left;
+}
+
+.table.proof {
+    float: right;
+    max-width: 400px;
+    margin-top: 28px;
+}
+
+.table.details:first-of-type td {
+    border: none !important;
+}
+
+.table.saveddata tr td {
+    border: none;
+}
+
+#thumbLP,
+#thumbBackLP {
+    border: 1px solid #dddddd;
+}
+
+.table.proof td {
+    border: none;
+}
+
+.table.checkout {
+    border: 1px solid #dddddd;
+}
+
+.table.checkoutitems {
+    border: 1px solid #dddddd;
+}
+
+.table.checkout td {
+    border: 1px solid #dddddd;
+    vertical-align: top;
+}
+
+.table.checkoutitems th, .table.checkoutitems td {
+    border-bottom: none;
+    border: 1px solid #dddddd;
+}
+
+.table.thankyou {
+    border: none
+}
+
+.table.thankyou td {
+    border: 1px solid #dddddd;
+}
+
+.table.thankyou td table td {
+    border: none;
+}
+
+.table.thankyou td[colspan="10"] {
+    padding: 10px 0;
+    border: none;
+}
+
+.table.thankyou #lasstcolumn {
+    display: none;
+}
+
+.table.thankyou td table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+.proofthumbnailform {
+    float: left;
+}
+
+.table.proofthumbnail td {
+    border: 1px solid #dddddd;
+}
+
+.proofrhs {
+    float: right;
+}
+
+.table.proofwrite td {
+    border: 1px solid #dddddd;
+}
+
+#proofScreenEditOrderDetails {
+    margin: 0;
+}
+
+#proofScreenEditOrderDetails td {
+    border-bottom: none;
+}
+
+#proofScreenOrderDetails td:first-of-type {
+    width: 150px;
+    font-weight: 600;
+}
+
+#proofScreenOrderDetails td {
+    border: 1px solid #dddddd;
+}

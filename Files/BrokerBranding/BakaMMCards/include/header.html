@@ -1,0 +1,758 @@
+
+
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="https://netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.css">
+<link rel="stylesheet" type="text/css" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.0/bootstrap-table.min.css" integrity="sha256-eU4xmpfQx1HSi5q1q2rHNcMEzTNJov7r2Wr/6zF3ANc=" crossorigin="anonymous" />
+<link rel="stylesheet" type="text/css" href="Include/jquerytimepicker.css" />
+<link rel="stylesheet" type="text/css" href="Include/cssMain.css">
+<link rel="stylesheet" type="text/css" href="Include/msProduct.css">
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.0/bootstrap-table.min.js" integrity="sha256-eXHLyyVI+v6X1wbfg9NB05IWqOqY4E9185nHZgeDIhg=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="Include/jquerytimepickermin.js"></script>
+<script type="text/javascript" src="Include/jsMain.js"></script>
+<script type="text/javascript" src="Include/jqueryquicksand.js"></script>
+<script type="text/javascript" src="Include/jqueryeasing13.js"></script>
+<script type="text/javascript" src="Include/msQuicksandJS.js"></script>
+<script type="text/javascript" src="Include/msProduct.js"></script>
+<script type="text/javascript" src="Include/msProductJquery.js"></script>
+<title>Butler</title>
+<style type="text/css">
+	#Event2, #Event3, #Event4,
+	.s1p2, .s1p3, .s1p4, .s1p5, .s1p6,
+	.s2p2, .s2p3, .s2p4, .s2p5, .s2p6,
+	.s3p2, .s3p3, .s3p4, .s3p5, .s3p6 {
+		display: none;
+		margin-top: 15px;
+	}
+	.add-event {
+		text-align: right;
+		font-size: 20px;
+		padding: 15px;
+		display: none;
+	}
+		.add-event span {
+			color: #359FD1;
+		}
+			.add-event span:hover {
+				cursor: pointer;
+			}
+	.show-event {
+		display: table !important;
+	}
+	.s1.show-event,
+	.s2.show-event,
+	.s3.show-event {
+		display: table-row !important;
+	}
+</style>
+</head>
+<body>
+	<div class="container-fluid">
+    	<div class="row">
+        	<div id="header">
+            	<div class="container">
+                	<div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 pull-right">
+                            <ul class="sml-links">
+                            	<!--APPROVE-->
+                                <li><a class="blu" href="//mmcards.mybrandstorefront.com/Reports.asp">Reports</a></li>
+                                <!--/APPROVE-->
+                                <li><a class="blu" href="//mmcards.mybrandstorefront.com/page.asp?name=Admission%20Authentication">Admission Programs</a></li>
+                            	<li><a class="blu" href="//mmcards.mybrandstorefront.com/Registration.asp">Account</a></li>
+                                <li><a class="org" href="Login.asp?red=//mmcards.mybrandstorefront.com">Logout</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 pull-left">
+                            <a id="brand" href="//mmcards.mybrandstorefront.com/RetailSite.asp"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <nav class="navbar navbar-default navbar-static-top">
+                 <div class="container">
+                 	<div class="navbar-header">
+                    	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="//mmcards.mybrandstorefront.com/RetailSite.asp">Butler</a>
+                    </div>
+                    <div id="navbar" class="navbar-collapse collapse">
+                    	<ul class="nav navbar-nav">
+                            <li><a href="//mmcards.mybrandstorefront.com/page.asp?name=Product%20Type">Products</a></li>
+                            <li><a target="_blank" href="/Include/storefrontStepByStepHandout.pdf">Storefront Guide</a></li>
+                            <li><a href="//mmcards.mybrandstorefront.com/Orders.asp">Orders</a></li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                        	<li><a href="//mmcards.mybrandstorefront.com/Cart.asp">Shopping Cart</a></li>
+                        </ul>
+                    </div>
+                 </div>           	
+            </nav>
+        </div>
+    </div>
+	
+	<div id="logoSelectPanel">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+					<ul id="filter-options2">
+						<li class="active alternate"><a class="all">All</a></li>
+						<li class="alternate"><a class="general">General</a></li>
+						<li class="alternate"><a class="centers">Centers</a></li>
+						<li class="alternate"><a class="colleges">Colleges</a></li>
+						<li class="alternate"><a class="office">Office Departments</a></li>
+						<!-- <li class="alternate"><a class="sports">Sports</a></li> -->
+					</ul>
+				</div>
+				<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+					<div class="row">
+						<ul id="logoOptions" class="product-thumbnails2">
+							<li class="item col-sm-3 col-xs-6" data-id="id-1" data-type="general">
+								<div class="item-content">
+									<img src="Include/butlerGen.png" alt="Butler University" />
+                                    <div class="button-holster">
+										<button class="btn btn-primary" onclick="logoPick(this, 'butlerGen')">Color Logo</button>
+                                        <button class="btn btn-primary white-logo" onclick="logoPick(this, 'whtbutlerGen')">White Logo</button>
+                                    </div>
+								</div>
+							</li>
+							<li class="item col-sm-3 col-xs-6" data-id="id-2" data-type="general">
+								<div class="item-content">
+									<img src="Include/butlerBulldogGen.png" alt="Butler Bulldog" />
+                                    <div class="button-holster">
+                                        <button class="btn btn-primary" onclick="logoPick(this, 'butlerBulldogGen')">Color Logo</button>
+                                        <button class="btn btn-primary white-logo" onclick="logoPick(this, 'whtbutlerBulldogGen')">White Logo</button>
+                                    </div>
+								</div>
+							</li>
+							<li class="item col-sm-3 col-xs-6" data-id="id-2" data-type="general">
+								<div class="item-content">
+									<img src="Include/butlerBulldogCI.png" alt="Butler Campus Impressions" />
+                                    <div class="button-holster">
+                                        <button class="btn btn-primary" onclick="logoPick(this, 'butlerBulldogCI')">Color Logo</button>
+                                        <button class="btn btn-primary white-logo" onclick="logoPick(this, 'whtbutlerBulldogCI')">White Logo</button>
+                                    </div>
+								</div>
+							</li>
+							<li class="item col-sm-3 col-xs-6" data-id="id-2" data-type="general">
+								<div class="item-content">
+									<img src="Include/butlerLibrary.jpg" alt="Butler Library" />
+                                    <div class="button-holster">
+                                        <button class="btn btn-primary" onclick="logoPick(this, 'butlerLibrary')">Color Logo</button>
+                                        <button class="btn btn-primary white-logo" onclick="logoPick(this, 'whtbutlerLibrary')">White Logo</button>
+                                    </div>
+								</div>
+							</li>
+							<li class="item col-sm-3 col-xs-6" data-id="id-2" data-type="general">
+								<div class="item-content">
+									<img src="Include/butlerBulldogOP.png" alt="Butler Operations" />
+                                    <div class="button-holster">
+                                        <button class="btn btn-primary" onclick="logoPick(this, 'butlerBulldogOP')">Color Logo</button>
+                                        <button class="btn btn-primary white-logo" onclick="logoPick(this, 'whtbutlerBulldogOP')">White Logo</button>
+                                    </div>
+								</div>
+							</li>
+							<li class="item col-sm-3 col-xs-6" data-id="id-2" data-type="general">
+								<div class="item-content">
+									<img src="Include/butlerBulldogUP.png" alt="University Police" />
+                                    <div class="button-holster">
+                                        <button class="btn btn-primary" onclick="logoPick(this, 'butlerBulldogUP')">Color Logo</button>
+                                        <button class="btn btn-primary white-logo" onclick="logoPick(this, 'whtbutlerBulldogUP')">White Logo</button>
+                                    </div>
+								</div>
+							</li>
+							<li class="item col-sm-3 col-xs-6" data-id="id-2" data-type="centers">
+								<div class="item-content">
+									<img src="Include/butlerBulldogCAT.png" alt="Center for Academic Technology" />
+                                    <div class="button-holster">
+                                        <button class="btn btn-primary" onclick="logoPick(this, 'butlerBulldogCAT')">Color Logo</button>
+                                        <button class="btn btn-primary white-logo" onclick="logoPick(this, 'whtbutlerBulldogCAT')">White Logo</button>
+                                    </div>
+								</div>
+							</li>
+							<li class="item col-sm-3 col-xs-6" data-id="id-3" data-type="centers">
+								<div class="item-content">
+									<img src="Include/butlerBulldogCaC.png" alt="Center for Citizenship and Community" />
+                                    <div class="button-holster">
+                                        <button class="btn btn-primary" onclick="logoPick(this, 'butlerBulldogCaC')">Color Logo</button>
+                                        <button class="btn btn-primary white-logo" onclick="logoPick(this, 'whtbutlerBulldogCaC')">White Logo</button>
+                                    </div>
+								</div>
+							</li>
+							<li class="item col-sm-3 col-xs-6" data-id="id-4" data-type="centers">
+								<div class="item-content">
+									<img src="Include/butlerBulldogCGE.png" alt="Center for Global Education" />
+                                    <div class="button-holster">
+                                        <button class="btn btn-primary" onclick="logoPick(this, 'butlerBulldogCGE')">Color Logo</button>
+                                        <button class="btn btn-primary white-logo" onclick="logoPick(this, 'whtbutlerBulldogCGE')">White Logo</button>
+                                    </div>
+								</div>
+							</li>
+							<li class="item col-sm-3 col-xs-6" data-id="id-5" data-type="centers">
+								<div class="item-content">
+									<img src="Include/butlerBulldogCHASE.png" alt="Center for High Achievement and Scholarly Engagement" />
+                                    <div class="button-holster">
+                                        <button class="btn btn-primary" onclick="logoPick(this, 'butlerBulldogCHASE')">Color Logo</button>
+                                        <button class="btn btn-primary white-logo" onclick="logoPick(this, 'whtbutlerBulldogCHASE')">White Logo</button>
+                                    </div>
+								</div>
+							</li>
+							<li class="item col-sm-3 col-xs-6" data-id="id-6" data-type="centers">
+								<div class="item-content">
+									<img src="Include/butlerBulldogCUE.png" alt="Center for Urban Ecology" />
+                                    <div class="button-holster">
+										<button class="btn btn-primary" onclick="logoPick(this, 'butlerBulldogCUE')">Color Logo</button>
+                                        <button class="btn btn-primary white-logo" onclick="logoPick(this, 'whtbutlerBulldogCUE')">White Logo</button>
+                                    </div>
+								</div>
+							</li>
+							<li class="item col-sm-3 col-xs-6" data-id="id-2" data-type="centers">
+								<div class="item-content">
+									<img src="Include/butlerBulldogEDDP.jpg" alt="Center for Academic Technology" />
+                                    <div class="button-holster">
+                                        <button class="btn btn-primary" onclick="logoPick(this, 'butlerBulldogEDDP')">Color Logo</button>
+                                        <button class="btn btn-primary white-logo" onclick="logoPick(this, 'whtbutlerBulldogEDDP')">White Logo</button>
+                                    </div>
+								</div>
+							</li>
+							<li class="item col-sm-3 col-xs-6" data-id="id-7" data-type="centers">
+								<div class="item-content">
+									<img src="Include/butlerBulldogLRC.png" alt="Learning Resource Center" />
+                                    <div class="button-holster">
+										<button class="btn btn-primary" onclick="logoPick(this, 'butlerBulldogLRC')">Color Logo</button>
+                                        <button class="btn btn-primary white-logo" onclick="logoPick(this, 'whtbutlerBulldogLRC')">White Logo</button>
+                                    </div>
+								</div>
+							</li>
+							<li class="item col-sm-3 col-xs-6" data-id="id-8" data-type="centers">
+								<div class="item-content">
+									<img src="Include/butlerCFV.png" alt="Center for Faith and Vocation" />
+                                    <div class="button-holster">
+                                        <button class="btn btn-primary" onclick="logoPick(this, 'butlerCFV')">Color Logo</button>
+                                        <button class="btn btn-primary white-logo" onclick="logoPick(this, 'whtbutlerCFV')">White Logo</button>
+                                    </div>
+								</div>
+							</li>
+							<li class="item col-sm-3 col-xs-6" data-id="id-9" data-type="colleges">
+								<div class="item-content">
+									<img src="Include/butlerBulldogCoB.png" alt="Lacy School of Business" />
+                                    <div class="button-holster">
+                                        <button class="btn btn-primary" onclick="logoPick(this, 'butlerBulldogCoB')">Color Logo</button>
+                                        <button class="btn btn-primary white-logo" onclick="logoPick(this, 'whtbutlerBulldogCoB')">White Logo</button>
+                                    </div>
+								</div>
+							</li>
+							<li class="item col-sm-3 col-xs-6" data-id="id-10" data-type="colleges">
+								<div class="item-content">
+									<img src="Include/butlerBulldogCoC.png" alt="College of Communication" />
+                                    <div class="button-holster">
+                                        <button class="btn btn-primary" onclick="logoPick(this, 'butlerBulldogCoC')">Color Logo</button>
+                                        <button class="btn btn-primary white-logo" onclick="logoPick(this, 'whtbutlerBulldogCoC')">White Logo</button>
+                                    </div>
+								</div>
+							</li>
+							<li class="item col-sm-3 col-xs-6" data-id="id-11" data-type="colleges">
+								<div class="item-content">
+									<img src="Include/butlerBulldogCoE.png" alt="College of Education" />
+                                    <div class="button-holster">
+                                        <button class="btn btn-primary" onclick="logoPick(this, 'butlerBulldogCoE')">Color Logo</button>
+                                        <button class="btn btn-primary white-logo" onclick="logoPick(this, 'whtbutlerBulldogCoE')">White Logo</button>
+                                    </div>
+								</div>
+							</li>
+							<li class="item col-sm-3 col-xs-6" data-id="id-12" data-type="colleges">
+								<div class="item-content">
+									<img src="Include/butlerBulldogCoLAS.png" alt="College of Liberal Arts and Sciences" />
+                                    <div class="button-holster">
+                                        <button class="btn btn-primary" onclick="logoPick(this, 'butlerBulldogCoLAS')">Color Logo</button>
+                                        <button class="btn btn-primary white-logo" onclick="logoPick(this, 'whtbutlerBulldogCoLAS')">White Logo</button>
+                                    </div>
+								</div>
+							</li>
+							<li class="item col-sm-3 col-xs-6" data-id="id-13" data-type="colleges">
+								<div class="item-content">
+									<img src="Include/butlerBulldogCoPHS.png" alt="College of Pharmacy and Health Sciences" />
+                                    <div class="button-holster">
+										<button class="btn btn-primary" onclick="logoPick(this, 'butlerBulldogCoPHS')">Color Logo</button>
+                                        <button class="btn btn-primary white-logo" onclick="logoPick(this, 'whtbutlerBulldogCoPHS')">White Logo</button>
+                                    </div>
+								</div>
+							</li>
+							<li class="item col-sm-3 col-xs-6" data-id="id-14" data-type="colleges">
+								<div class="item-content">
+									<img src="Include/butlerBulldogJCoA.png" alt="Jordan College of the Arts" />
+                                    <div class="button-holster">
+										<button class="btn btn-primary" onclick="logoPick(this, 'butlerBulldogJCoA')">Color Logo</button>
+                                        <button class="btn btn-primary white-logo" onclick="logoPick(this, 'whtbutlerBulldogJCoA')">White Logo</button>
+                                    </div>
+								</div>
+							</li>
+							<li class="item col-sm-3 col-xs-6" data-id="id-15" data-type="colleges">
+								<div class="item-content">
+									<img src="Include/butlerCoB.png" alt="Lacy School of Business" />
+                                    <div class="button-holster">
+                                        <button class="btn btn-primary" onclick="logoPick(this, 'butlerCoB')">Color Logo</button>
+                                        <button class="btn btn-primary white-logo" onclick="logoPick(this, 'whtbutlerCoB')">White Logo</button>
+                                    </div>
+								</div>
+							</li>
+							<li class="item col-sm-3 col-xs-6" data-id="id-16" data-type="colleges">
+								<div class="item-content">
+									<img src="Include/butlerCoC.png" alt="College of Communication" />
+                                    <div class="button-holster">
+                                        <button class="btn btn-primary" onclick="logoPick(this, 'butlerCoC')">Color Logo</button>
+                                        <button class="btn btn-primary white-logo" onclick="logoPick(this, 'whtbutlerCoC')">White Logo</button>
+                                    </div>
+								</div>
+							</li>
+							<li class="item col-sm-3 col-xs-6" data-id="id-17" data-type="colleges">
+								<div class="item-content">
+									<img src="Include/butlerCoE.png" alt="College of Education" />
+                                    <div class="button-holster">
+                                        <button class="btn btn-primary" onclick="logoPick(this, 'butlerCoE')">Color Logo</button>
+                                        <button class="btn btn-primary white-logo" onclick="logoPick(this, 'whtbutlerCoE')">White Logo</button>
+                                    </div>
+								</div>
+							</li>
+							<li class="item col-sm-3 col-xs-6" data-id="id-18" data-type="colleges">
+								<div class="item-content">
+									<img src="Include/butlerCoLAS.png" alt="College of Liberal Arts and Sciences" />
+                                    <div class="button-holster">
+                                        <button class="btn btn-primary" onclick="logoPick(this, 'butlerCoLAS')">Color Logo</button>
+                                        <button class="btn btn-primary white-logo" onclick="logoPick(this, 'whtbutlerCoLAS')">White Logo</button>
+                                    </div>
+								</div>
+							</li>
+							<li class="item col-sm-3 col-xs-6" data-id="id-19" data-type="colleges">
+								<div class="item-content">
+									<img src="Include/butlerCoPHS.png" alt="College of Pharmacy and Health Sciences" />
+                                    <div class="button-holster">
+                                        <button class="btn btn-primary" onclick="logoPick(this, 'butlerCoPHS')">Color Logo</button>
+                                        <button class="btn btn-primary white-logo" onclick="logoPick(this, 'whtbutlerCoPHS')">White Logo</button>
+                                    </div>
+								</div>
+							</li>
+							<li class="item col-sm-3 col-xs-6" data-id="id-20" data-type="colleges">
+								<div class="item-content">
+									<img src="Include/butlerJCoA.png" alt="Jordan College of the Arts" />
+                                    <div class="button-holster">
+                                        <button class="btn btn-primary" onclick="logoPick(this, 'butlerJCoA')">Color Logo</button>
+                                        <button class="btn btn-primary white-logo" onclick="logoPick(this, 'whtbutlerJCoA')">White Logo</button>
+                                    </div>
+								</div>
+							</li>
+							<!-- <li class="item col-sm-3 col-xs-6" data-id="id-21" data-type="colleges">
+								<div class="item-content">
+									<img src="Include/butlerRibbonDTCprgj.png" alt="Desmond Tutu Center" />
+                                    <div class="button-holster">
+                                        <button class="btn btn-primary" onclick="logoPick(this, 'butlerRibbonDTCprgj')">Color Logo</button>
+                                        <button class="btn btn-primary white-logo" onclick="logoPick(this, 'whtbutlerRibbonDTCprgj')">White Logo</button>
+                                    </div>
+								</div>
+							</li>
+							<li class="item col-sm-3 col-xs-6" data-id="id-22" data-type="colleges">
+								<div class="item-content">
+									<img src="Include/butlerDTCprgj.png" alt="Desmond Tutu Center" />
+                                    <div class="button-holster">
+                                        <button class="btn btn-primary" onclick="logoPick(this, 'butlerDTCprgj')">Color Logo</button>
+                                        <button class="btn btn-primary white-logo" onclick="logoPick(this, 'whtbutlerDTCprgj')">White Logo</button>
+                                    </div>
+								</div>
+							</li> -->
+							<!-- <li class="item col-sm-3 col-xs-6" data-id="id-23" data-type="colleges">
+								<div class="item-content">
+									<img src="Include/butlerDTCprgjNL.png" alt="Desmond Tutu Center" />
+                                    <div class="button-holster">
+                                        <button class="btn btn-primary" onclick="logoPick(this, 'butlerNLDTCprgj')">Color Logo</button>
+                                        <button class="btn btn-primary white-logo" onclick="logoPick(this, 'whtbutlerNLDTCprgj')">White Logo</button>
+                                    </div>
+								</div>
+							</li> -->
+							<!-- <li class="item col-sm-3 col-xs-6" data-id="id-24" data-type="office">
+								<div class="item-content">
+									<img src="Include/butlerBulldogA.png" alt="Athletics" />
+                                    <div class="button-holster">
+                                        <button class="btn btn-primary" onclick="logoPick(this, 'butlerBulldogAT')">Color Logo</button>
+                                        <button class="btn btn-primary white-logo" onclick="logoPick(this, 'whtbutlerBulldogAT')">White Logo</button>
+                                    </div>
+								</div>
+							</li> -->
+							<li class="item col-sm-3 col-xs-6" data-id="id-24" data-type="office">
+								<div class="item-content">
+									<img src="Include/butlerBulldogAPDI.png" alt="Academic Program Development and Innovation" />
+                                    <div class="button-holster">
+                                        <button class="btn btn-primary" onclick="logoPick(this, 'butlerBulldogAPDI')">Color Logo</button>
+                                        <button class="btn btn-primary white-logo" onclick="logoPick(this, 'whtbutlerBulldogAPDI')">White Logo</button>
+                                    </div>
+								</div>
+							</li>
+							<li class="item col-sm-3 col-xs-6" data-id="id-25" data-type="office">
+								<div class="item-content">
+									<img src="Include/butlerBulldogBB.png" alt="Butler Ballet" />
+                                    <div class="button-holster">
+                                        <button class="btn btn-primary" onclick="logoPick(this, 'butlerBulldogBB')">Color Logo</button>
+                                        <button class="btn btn-primary white-logo" onclick="logoPick(this, 'whtbutlerBulldogBB')">White Logo</button>
+                                    </div>
+								</div>
+							</li>
+							<li class="item col-sm-3 col-xs-6" data-id="id-26" data-type="office">
+								<div class="item-content">
+									<img src="Include/butlerBulldogBT.png" alt="Butler Theatre" />
+                                    <div class="button-holster">
+                                        <button class="btn btn-primary" onclick="logoPick(this, 'butlerBulldogBT')">Color Logo</button>
+                                        <button class="btn btn-primary white-logo" onclick="logoPick(this, 'whtbutlerBulldogBT')">White Logo</button>
+                                    </div>
+								</div>
+							</li>
+							<li class="item col-sm-3 col-xs-6" data-id="id-27" data-type="office">
+								<div class="item-content">
+									<img src="Include/butlerBulldogCCS.png" alt="Counseling and Consultation Services" />
+                                    <div class="button-holster">
+                                        <button class="btn btn-primary" onclick="logoPick(this, 'butlerBulldogCCS')">Color Logo</button>
+                                        <button class="btn btn-primary white-logo" onclick="logoPick(this, 'whtbutlerBulldogCCS')">White Logo</button>
+                                    </div>
+								</div>
+							</li>
+							<li class="item col-sm-3 col-xs-6" data-id="id-28" data-type="office">
+								<div class="item-content">
+									<img src="Include/butlerBulldogDoPS.png" alt="Department of Public Safety" />
+                                    <div class="button-holster">
+                                        <button class="btn btn-primary" onclick="logoPick(this, 'butlerBulldogDoPS')">Color Logo</button>
+                                        <button class="btn btn-primary white-logo" onclick="logoPick(this, 'whtbutlerBulldogDoPS')">White Logo</button>
+                                    </div>
+								</div>
+							</li>
+							<li class="item col-sm-3 col-xs-6" data-id="id-29" data-type="office">
+								<div class="item-content">
+									<img src="Include/butlerBulldogDP.png" alt="Diversity Programs" />
+                                    <div class="button-holster">
+                                        <button class="btn btn-primary" onclick="logoPick(this, 'butlerBulldogDP')">Color Logo</button>
+                                        <button class="btn btn-primary white-logo" onclick="logoPick(this, 'whtbutlerBulldogDP')">White Logo</button>
+                                    </div>
+								</div>
+							</li>
+							<li class="item col-sm-3 col-xs-6" data-id="id-30" data-type="office">
+								<div class="item-content">
+									<img src="Include/butlerBulldogEE.png" alt="Executive Education" />
+                                    <div class="button-holster">
+                                        <button class="btn btn-primary" onclick="logoPick(this, 'butlerBulldogEE')">Color Logo</button>
+                                        <button class="btn btn-primary white-logo" onclick="logoPick(this, 'whtbutlerBulldogEE')">White Logo</button>
+                                    </div>
+								</div>
+							</li>
+							<li class="item col-sm-3 col-xs-6" data-id="id-31" data-type="office">
+								<div class="item-content">
+									<img src="Include/butlerBulldogOoFA.png" alt="Office of Financial Aid" />
+                                    <div class="button-holster">
+                                        <button class="btn btn-primary" onclick="logoPick(this, 'butlerBulldogOoFA')">Color Logo</button>
+                                        <button class="btn btn-primary white-logo" onclick="logoPick(this, 'whtbutlerBulldogOoFA')">White Logo</button>
+                                    </div>
+								</div>
+							</li>
+							<li class="item col-sm-3 col-xs-6" data-id="id-32" data-type="office">
+								<div class="item-content">
+									<img src="Include/butlerBulldogHRMaD.png" alt="Human Resources Management and Development" />
+                                    <div class="button-holster">
+                                        <button class="btn btn-primary" onclick="logoPick(this, 'butlerBulldogHRMaD')">Color Logo</button>
+                                        <button class="btn btn-primary white-logo" onclick="logoPick(this, 'whtbutlerBulldogHRMaD')">White Logo</button>
+                                    </div>
+								</div>
+							</li>
+							<li class="item col-sm-3 col-xs-6" data-id="id-33" data-type="office">
+								<div class="item-content">
+									<img src="Include/butlerBulldogICS.png" alt="Internship and Career Services" />
+                                    <div class="button-holster">
+                                        <button class="btn btn-primary" onclick="logoPick(this, 'butlerBulldogICS')">Color Logo</button>
+                                        <button class="btn btn-primary white-logo" onclick="logoPick(this, 'whtbutlerBulldogICS')">White Logo</button>
+                                    </div>
+								</div>
+							</li>
+							<li class="item col-sm-3 col-xs-6" data-id="id-33" data-type="office">
+								<div class="item-content">
+									<img src="Include/butlerBulldogIT.png" alt="Information Technology" />
+                                    <div class="button-holster">
+                                        <button class="btn btn-primary" onclick="logoPick(this, 'butlerBulldogIT')">Color Logo</button>
+                                        <button class="btn btn-primary white-logo" onclick="logoPick(this, 'whtbutlerBulldogIT')">White Logo</button>
+                                    </div>
+								</div>
+							</li>
+							<li class="item col-sm-3 col-xs-6" data-id="id-34" data-type="office">
+								<div class="item-content">
+									<img src="Include/butlerBulldogOoP.png" alt="Office of the President" />
+                                    <div class="button-holster">
+                                        <button class="btn btn-primary" onclick="logoPick(this, 'butlerBulldogOoP')">Color Logo</button>
+                                        <button class="btn btn-primary white-logo" onclick="logoPick(this, 'whtbutlerBulldogOoP')">White Logo</button>
+                                    </div>
+								</div>
+							</li>
+							<li class="item col-sm-3 col-xs-6" data-id="id-35" data-type="office">
+								<div class="item-content">
+									<img src="Include/butlerBulldogOotP.png" alt="Office of the Provost" />
+                                    <div class="button-holster">
+                                        <button class="btn btn-primary" onclick="logoPick(this, 'butlerBulldogOotP')">Color Logo</button>
+                                        <button class="btn btn-primary white-logo" onclick="logoPick(this, 'whtbutlerBulldogOotP')">White Logo</button>
+                                    </div>
+								</div>
+							</li>
+							<li class="item col-sm-3 col-xs-6" data-id="id-36" data-type="office">
+								<div class="item-content">
+									<img src="Include/butlerBulldogPLSE.png" alt="Programs for Leadership and Service Education" />
+                                    <div class="button-holster">
+										<button class="btn btn-primary" onclick="logoPick(this, 'butlerBulldogPLSE')">Color Logo</button>
+                                        <button class="btn btn-primary white-logo" onclick="logoPick(this, 'whtbutlerBulldogPLSE')">Whtie Logo</button>
+                                    </div>
+								</div>
+							</li>
+							<li class="item col-sm-3 col-xs-6" data-id="id-37" data-type="office">
+								<div class="item-content">
+									<img src="Include/butlerBulldogRL.png" alt="Residence Life" />
+                                    <div class="button-holster">
+                                        <button class="btn btn-primary" onclick="logoPick(this, 'butlerBulldogRL')">Color Logo</button>
+                                        <button class="btn btn-primary white-logo" onclick="logoPick(this, 'whtbutlerBulldogRL')">White Logo</button>
+                                    </div>
+								</div>
+							</li>
+							<li class="item col-sm-3 col-xs-6" data-id="id-38" data-type="office">
+								<div class="item-content">
+									<img src="Include/butlerBulldogRR.png" alt="Registration and Records" />
+                                    <div class="button-holster">
+                                        <button class="btn btn-primary" onclick="logoPick(this, 'butlerBulldogRR')">Color Logo</button>
+                                        <button class="btn btn-primary white-logo" onclick="logoPick(this, 'whtbutlerBulldogRR')">White Logo</button>
+                                    </div>
+								</div>
+							</li>
+							<li class="item col-sm-3 col-xs-6" data-id="id-39" data-type="office">
+								<div class="item-content">
+									<img src="Include/butlerBulldogSoM.png" alt="School of Music" />
+                                    <div class="button-holster">
+                                        <button class="btn btn-primary" onclick="logoPick(this, 'butlerBulldogSoM')">Color Logo</button>
+                                        <button class="btn btn-primary white-logo" onclick="logoPick(this, 'whtbutlerBulldogSoM')">White Logo</button>
+                                    </div>
+								</div>
+							</li>
+							<li class="item col-sm-3 col-xs-6" data-id="id-40" data-type="office">
+								<div class="item-content">
+									<img src="Include/butlerBulldogSA.png" alt="Student Accounts" />
+                                    <div class="button-holster">
+                                        <button class="btn btn-primary" onclick="logoPick(this, 'butlerBulldogSA')">Color Logo</button>
+                                        <button class="btn btn-primary white-logo" onclick="logoPick(this, 'whtbutlerBulldogSA')">White Logo</button>
+                                    </div>
+								</div>
+							</li>
+							<li class="item col-sm-3 col-xs-6" data-id="id-41" data-type="office">
+								<div class="item-content">
+									<img src="Include/butlerBulldogSAf.png" alt="Student Affairs" />
+                                    <div class="button-holster">
+                                        <button class="btn btn-primary" onclick="logoPick(this, 'butlerBulldogSAf')">Color Logo</button>
+                                        <button class="btn btn-primary white-logo" onclick="logoPick(this, 'whtbutlerBulldogSAf')">White Logo</button>
+                                    </div>
+								</div>
+							</li>
+							<li class="item col-sm-3 col-xs-6" data-id="id-40" data-type="office">
+								<div class="item-content">
+									<img src="Include/butlerBulldogSAs.png" alt="Staff Assembly" />
+                                    <div class="button-holster">
+                                        <button class="btn btn-primary" onclick="logoPick(this, 'butlerBulldogSAs')">Color Logo</button>
+                                        <button class="btn btn-primary white-logo" onclick="logoPick(this, 'whtbutlerBulldogSAs')">White Logo</button>
+                                    </div>
+								</div>
+							</li>
+							<li class="item col-sm-3 col-xs-6" data-id="id-40" data-type="office">
+								<div class="item-content">
+									<img src="Include/butlerBulldogSDS.png" alt="Student Disability Services" />
+                                    <div class="button-holster">
+                                        <button class="btn btn-primary" onclick="logoPick(this, 'butlerBulldogSDS')">Color Logo</button>
+                                        <button class="btn btn-primary white-logo" onclick="logoPick(this, 'whtbutlerBulldogSDS')">White Logo</button>
+                                    </div>
+								</div>
+							</li>
+							<li class="item col-sm-3 col-xs-6" data-id="id-42" data-type="office">
+								<div class="item-content">
+									<img src="Include/butlerBulldogUA.png" alt="University Advancement" />
+                                    <div class="button-holster">
+                                        <button class="btn btn-primary" onclick="logoPick(this, 'butlerBulldogUA')">Color Logo</button>
+                                        <button class="btn btn-primary white-logo" onclick="logoPick(this, 'whtbutlerBulldogUA')">White Logo</button>
+                                    </div>
+								</div>
+							</li>
+							<li class="item col-sm-3 col-xs-6" data-id="id-43" data-type="office">
+								<div class="item-content">
+									<img src="Include/butlerBulldogOoUE.png" alt="Office of University Events" />
+                                    <div class="button-holster">
+                                        <button class="btn btn-primary" onclick="logoPick(this, 'butlerBulldogOoUE')">Color Logo</button>
+                                        <button class="btn btn-primary white-logo" onclick="logoPick(this, 'whtbutlerBulldogOoUE')">White Logo</button>
+                                    </div>
+								</div>
+							</li>
+							<li class="item col-sm-3 col-xs-6" data-id="id-44" data-type="office">
+								<div class="item-content">
+									<img src="Include/butlerBulldogAPP.png" alt="Alumni and Parent Programs" />
+                                    <div class="button-holster">
+                                        <button class="btn btn-primary" onclick="logoPick(this, 'butlerBulldogAPP')">Color Logo</button>
+                                        <button class="btn btn-primary white-logo" onclick="logoPick(this, 'whtbutlerBulldogAPP')">White Logo</button>
+                                    </div>
+								</div>
+							</li>
+							<li class="item col-sm-3 col-xs-6" data-id="id-45" data-type="office">
+								<div class="item-content">
+									<img src="Include/butlerBulldogBCG.png" alt="Business Consulting Group" />
+                                    <div class="button-holster">
+                                        <button class="btn btn-primary" onclick="logoPick(this, 'butlerBulldogBCG')">Color Logo</button>
+                                        <button class="btn btn-primary white-logo" onclick="logoPick(this, 'whtbutlerBulldogBCG')">White Logo</button>
+                                    </div>
+								</div>
+							</li>
+							<li class="item col-sm-3 col-xs-6" data-id="id-46" data-type="office">
+								<div class="item-content">
+									<img src="Include/butlerBulldogFS.png" alt="Faculty Senate" />
+                                    <div class="button-holster">
+                                        <button class="btn btn-primary" onclick="logoPick(this, 'butlerBulldogFS')">Color Logo</button>
+                                        <button class="btn btn-primary white-logo" onclick="logoPick(this, 'whtbutlerBulldogFS')">White Logo</button>
+                                    </div>
+								</div>
+							</li>
+							<li class="item col-sm-3 col-xs-6" data-id="id-46" data-type="office">
+								<div class="item-content">
+									<img src="Include/butlerBulldogOoA.png" alt="Office of Admission" />
+                                    <div class="button-holster">
+                                        <button class="btn btn-primary" onclick="logoPick(this, 'butlerBulldogOoA')">Color Logo</button>
+                                        <button class="btn btn-primary white-logo" onclick="logoPick(this, 'whtbutlerBulldogOoA')">White Logo</button>
+                                    </div>
+								</div>
+							</li>
+							<!-- <li class="item col-sm-3 col-xs-6" data-id="id-47" data-type="sports">
+								<div class="item-content">
+									<img src="Include/butlerBaseball.png" alt="Butler Baseball" />
+                                    <div class="button-holster">
+                                        <button class="btn btn-primary" onclick="logoPick(this, 'butlerBaseball')">Color Logo</button>
+                                        <button class="btn btn-primary white-logo" onclick="logoPick(this, 'whtbutlerBaseball')">White Logo</button>
+                                    </div>
+								</div>
+							</li> -->
+							<!-- <li class="item col-sm-3 col-xs-6" data-id="id-48" data-type="sports">
+								<div class="item-content">
+									<img src="Include/butlerBasketball.png" alt="Butler Basketball" />
+                                    <div class="button-holster">
+                                        <button class="btn btn-primary" onclick="logoPick(this, 'butlerBasketball')">Color Logo</button>
+                                        <button class="btn btn-primary white-logo" onclick="logoPick(this, 'whtbutlerBasketball')">White Logo</button>
+                                    </div>
+								</div>
+							</li> -->
+							<!-- <li class="item col-sm-3 col-xs-6" data-id="id-49" data-type="sports">
+								<div class="item-content">
+									<img src="Include/butlerWomensBasketball.png" alt="Butler Women's Basketball" />
+                                    <div class="button-holster">
+                                        <button class="btn btn-primary" onclick="logoPick(this, 'butlerWomensBasketball')">Color Logo</button>
+                                        <button class="btn btn-primary white-logo" onclick="logoPick(this, 'whtbutlerWomensBasketball')">White Logo</button>
+                                    </div>
+								</div>
+							</li> -->
+							<!-- <li class="item col-sm-3 col-xs-6" data-id="id-50" data-type="sports">
+								<div class="item-content">
+									<img src="Include/butlerCrossCountry.png" alt="Butler Cross Country" />
+                                    <div class="button-holster">
+                                        <button class="btn btn-primary" onclick="logoPick(this, 'butlerCrossCountry')">Color Logo</button>
+                                        <button class="btn btn-primary white-logo" onclick="logoPick(this, 'whtbutlerCrossCountry')">White Logo</button>
+                                    </div>
+								</div>
+							</li> -->
+							<!-- <li class="item col-sm-3 col-xs-6" data-id="id-51" data-type="sports">
+								<div class="item-content">
+									<img src="Include/butlerFootball.png" alt="Butler Football" />
+                                    <div class="button-holster">
+                                        <button class="btn btn-primary" onclick="logoPick(this, 'butlerFootball')">Color Logo</button>
+                                        <button class="btn btn-primary white-logo" onclick="logoPick(this, 'whtbutlerFootball')">White Logo</button>
+                                    </div>
+								</div>
+							</li> -->
+							<!-- <li class="item col-sm-3 col-xs-6" data-id="id-52" data-type="sports">
+								<div class="item-content">
+									<img src="Include/butlerGolf.png" alt="Butler Golf" />
+                                    <div class="button-holster">
+                                        <button class="btn btn-primary" onclick="logoPick(this, 'butlerGolf')">Color Logo</button>
+                                        <button class="btn btn-primary white-logo" onclick="logoPick(this, 'whtbutlerGolf')">White Logo</button>
+                                    </div>
+								</div>
+							</li> -->
+							<!-- <li class="item col-sm-3 col-xs-6" data-id="id-53" data-type="sports">
+								<div class="item-content">
+									<img src="Include/butlerLacrosse.png" alt="Butler Lacrosse" />
+                                    <div class="button-holster">
+                                        <button class="btn btn-primary" onclick="logoPick(this, 'butlerLacrosse')">Color Logo</button>
+                                        <button class="btn btn-primary white-logo" onclick="logoPick(this, 'whtbutlerLacrosse')">White Logo</button>
+                                    </div>
+								</div>
+							</li> -->
+							<!-- <li class="item col-sm-3 col-xs-6" data-id="id-54" data-type="sports">
+								<div class="item-content">
+									<img src="Include/butlerSoccer.png" alt="Butler Soccer" />
+                                    <div class="button-holster">
+                                        <button class="btn btn-primary" onclick="logoPick(this, 'butlerSoccer')">Selectm Color Logo</button>
+                                        <button class="btn btn-primary white-logo" onclick="logoPick(this, 'whtbutlerSoccer')">White Logo</button>
+                                    </div>
+								</div>
+							</li> -->
+							<!-- <li class="item col-sm-3 col-xs-6" data-id="id-55" data-type="sports">
+								<div class="item-content">
+									<img src="Include/butlerSoftball.png" alt="Butler Softball" />
+                                    <div class="button-holster">
+                                        <button class="btn btn-primary" onclick="logoPick(this, 'butlerSoftball')">Color Logo</button>
+                                        <button class="btn btn-primary white-logo" onclick="logoPick(this, 'whtbutlerSoftball')">White Logo</button>
+                                    </div>
+								</div>
+							</li> -->
+							<!-- <li class="item col-sm-3 col-xs-6" data-id="id-56" data-type="sports">
+								<div class="item-content">
+									<img src="Include/butlerSwimming.png" alt="Butler Swimming" />
+                                    <div class="button-holster">
+                                        <button class="btn btn-primary" onclick="logoPick(this, 'butlerSwimming')">Color Logo</button>
+                                        <button class="btn btn-primary white-logo" onclick="logoPick(this, 'whtbutlerSwimming')">White Logo</button>
+                                    </div>
+								</div>
+							</li> -->
+							<!-- <li class="item col-sm-3 col-xs-6" data-id="id-57" data-type="sports">
+								<div class="item-content">
+									<img src="Include/butlerTennis.png" alt="Butler Tennis" />
+                                    <div class="button-holster">
+                                        <button class="btn btn-primary" onclick="logoPick(this, 'butlerTennis')">Color Logo</button>
+                                        <button class="btn btn-primary white-logo" onclick="logoPick(this, 'whtbutlerTennis')">White Logo</button>
+                                    </div>
+								</div>
+							</li> -->
+							<!-- <li class="item col-sm-3 col-xs-6" data-id="id-58" data-type="sports">
+								<div class="item-content">
+									<img src="Include/butlerTrackField.png" alt="Butler Track & Field" />
+                                   	<div class="button-holster">
+                                        <button class="btn btn-primary" onclick="logoPick(this, 'butlerTrackField')">Color Logo</button>
+                                        <button class="btn btn-primary white-logo" onclick="logoPick(this, 'whtbutlerTrackField')">White Logo</button>
+                                    </div>
+								</div>
+							</li> -->
+							<!-- <li class="item col-sm-3 col-xs-6" data-id="id-59" data-type="sports">
+								<div class="item-content">
+									<img src="Include/butlerVolleyball.png" alt="Butler Volleyball" />
+                                    <div class="button-holster">
+                                        <button class="btn btn-primary" onclick="logoPick(this, 'butlerVolleyball')">Color Logo</button>
+                                        <button class="btn btn-primary white-logo" onclick="logoPick(this, 'whtbutlerVolleyball')">White Logo</button>
+                                    </div>
+								</div>
+							</li> -->
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
