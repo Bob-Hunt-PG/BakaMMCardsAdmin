@@ -1,0 +1,612 @@
+form {
+    border-right : 1px;
+    padding-right : 0;
+    border-top : 1px;
+    padding-left : 0;
+    padding-bottom : 0;
+    margin : 0;
+    border-left : 1px;
+    padding-top : 0;
+    border-bottom : 1px;
+    }
+    body {
+    padding : 0px 75px 0px 75px;
+    background-color : #eeeeee;
+    margin-top : 0;
+    }
+    P {
+    font-size : 11px;
+    font-family : verdana;
+    }
+    .wrapper {
+    font-size : 12px;
+    font-family : verdana;
+    border-collapse : collapse;
+    }
+    a:link {
+    font-weight : bold;
+    font-size : 9pt;
+    color : #333333;
+    font-family : Arial, Helvetica;
+    }
+    a:visited {
+    font-weight : bold;
+    font-size : 9pt;
+    color : #333333;
+    font-family : Arial, Helvetica;
+    }
+    a:hover {
+    font-weight : bold;
+    font-size : 9pt;
+    color : #333333;
+    font-family : Arial, Helvetica;
+    }
+    a.A_Tab:link {
+    color : #333333;
+    text-decoration : none;
+    }
+    a.A_Tab:active {
+    color : #333333;
+    text-decoration : none;
+    }
+    a.A_Tab:visited {
+    color : #333333;
+    text-decoration : none;
+    }
+    a.A_Tab:hover {
+    color : #333333;
+    text-decoration : underline;
+    }
+    input {
+    border-right : 1px solid #afc2cc;
+    border-top : 1px solid #afc2cc;
+    font-size : 11px;
+    border-left : 1px solid #afc2cc;
+    color : #000000;
+    border-bottom : 1px solid #afc2cc;
+    font-family : verdana;
+    background-color : #ffffff;
+    }
+    input.button {
+    border-right : 1px solid #636e8b;
+    border-top : 1px solid #636e8b;
+    font-weight : normal;
+    font-size : 11px;
+    border-left : 1px solid #636e8b;
+    color : #000000;
+    border-bottom : 1px solid #636e8b;
+    font-style : normal;
+    font-family : verdana, Arial, Helvetica;
+    background-color : #f3f0f0;
+    font-variant : normal;
+    }
+    input.check {
+    border-right : 0;
+    border-top : 0;
+    border-left : 0;
+    color : #000000;
+    border-bottom : 30px;
+    background-color : transparent;
+    }
+    select {
+    font-size : 11px;
+    color : #000000;
+    font-family : verdana, Arial, Helvetica;
+    background-color : #ffffff;
+    }
+    textarea {
+    border-right : 1px solid #afc2cc;
+    border-top : 1px solid #afc2cc;
+    font-size : 11px;
+    border-left : 1px solid #afc2cc;
+    color : #000000;
+    border-bottom : 1px solid #afc2cc;
+    font-family : verdana;
+    }
+    table.Mtable td {
+    border-bottom : 1px solid #9aa1b1;
+    }
+    .DataTD {
+    border-right : 1px dotted #c6d2de;
+    padding-right : 5px;
+    border-top : 1px solid #c6d2de;
+    padding-left : 5px;
+    background : #ffffff;
+    padding-bottom : 1px;
+    border-left : 1px dotted #c6d2de;
+    padding-top : 1px;
+    border-bottom : 1px solid #c6d2de;
+    }
+    .DataTDGrey {
+    border-right : 1px inset;
+    border-top : 1px inset;
+    font-size : 8pt;
+    border-left : 1px inset;
+    color : #000000;
+    border-bottom : 1px inset;
+    font-family : Arial, Tahoma, Verdana, Helvetica;
+    background-color : #efeded;
+    }
+    .DataTDGrey {
+    border-right : 1px dotted #c6d2de;
+    padding-right : 5px;
+    border-top : 1px solid #c6d2de;
+    padding-left : 5px;
+    padding-bottom : 1px;
+    border-left : 1px dotted #c6d2de;
+    padding-top : 1px;
+    border-bottom : 1px solid #c6d2de;
+    }
+    .DataTDNotDotted {
+    border-right : 1px inset;
+    border-top : 1px inset;
+    font-size : 8pt;
+    border-left : 1px inset;
+    color : #000000;
+    border-bottom : 1px inset;
+    font-family : Arial, Tahoma, Verdana, Helvetica;
+    background-color : #e2e2e2;
+    }
+    .DataTDNotDotted {
+    border-right : 1px solid #c6d2de;
+    padding-right : 5px;
+    border-top : 1px solid #c6d2de;
+    padding-left : 5px;
+    background : #ffffff;
+    padding-bottom : 1px;
+    border-left : 1px solid #c6d2de;
+    padding-top : 1px;
+    border-bottom : 1px solid #c6d2de;
+    }
+    .DataTDNoBorder {
+    border-top-width : 0;
+    border-left-width : 0;
+    font-size : 8pt;
+    border-bottom-width : 0;
+    color : #000000;
+    font-family : Arial, Tahoma, Verdana, Helvetica;
+    background-color : #f3f3f3;
+    border-right-width : 0;
+    }
+    .texteBlanc {
+    font-weight : normal;
+    font-size : 9px;
+    color : #ffffff;
+    font-style : normal;
+    font-family : Verdana, Arial, Helvetica, sans-serif;
+    }
+    h1, .bgHeader {
+    font-size : 20px;
+    font-weight : normal;
+    font-style : normal;
+    font-family : Verdana, Arial, Helvetica, sans-serif;
+    padding : 20px 10px 0 0;
+    }
+    td.TOP {
+    font-weight : bold;
+    font-size : 12px;
+    color : #0000ff;
+    font-family : Tahoma, Verdana, Arial;
+    }
+    #maintable {
+    background-color : #ffffff;
+    width : 100%;
+    }
+    .tableheader {
+    border-right : 1px solid #c6d2de;
+    padding-right : 5px;
+    border-top : 1px solid #54678c;
+    padding-left : 5px;
+    font-weight : bold;
+    background : #eeeeee;
+    padding-bottom : 1px;
+    border-left : 1px solid #c6d2de;
+    color : #000000;
+    padding-top : 1px;
+    border-bottom : 3px double #c6d2de;
+    }
+    .title {
+    border-right : 1px solid #c6d2de;
+    padding-right : 5px;
+    border-top : 1px solid #54678c;
+    padding-left : 5px;
+    font-weight : bold;
+    background : #eeeeee;
+    padding-bottom : 1px;
+    border-left : 1px solid #c6d2de;
+    padding-top : 1px;
+    border-bottom : 3px double #c6d2de;
+    }
+    #firstcolumn {
+    border-left : medium none;
+    }
+    #lastcolumn {
+    border-right : medium none;
+    }
+    #lastcolumnsolid {
+    border-right : 1px solid #c6d2de;
+    }
+    .label {
+    padding-right : 0;
+    padding-left : 5px;
+    font-size : 11px;
+    padding-bottom : 0;
+    padding-top : 0;
+    font-family : verdana;
+    }
+    .labelboldtext {
+    padding-right : 5px;
+    padding-left : 5px;
+    font-weight : bold;
+    font-size : 11px;
+    background : #e2e2e2;
+    padding-bottom : 2px;
+    color : #002d45;
+    padding-top : 2px;
+    border-bottom : 1px solid #ffffff;
+    font-family : verdana;
+    }
+    .labeltext {
+    padding-right : 5px;
+    padding-left : 5px;
+    font-size : 11px;
+    background : #e2e2e2;
+    padding-bottom : 2px;
+    color : #002d45;
+    padding-top : 2px;
+    border-bottom : 1px solid #ffffff;
+    font-family : verdana;
+    }
+    .groupcontrol {
+    padding-right : 5px;
+    padding-left : 5px;
+    font-size : 11px;
+    background : #e2e2e2;
+    padding-bottom : 2px;
+    color : #002d45;
+    padding-top : 2px;
+    border-bottom : 1px solid #ffffff;
+    font-family : verdana;
+    }
+    .groupcontrolNoBorder {
+    padding-right : 5px;
+    padding-left : 5px;
+    font-size : 11px;
+    background : #e2e2e2;
+    padding-bottom : 2px;
+    color : #002d45;
+    padding-top : 2px;
+    font-family : verdana;
+    }
+    .labelgrouptext {
+    padding-right : 5px;
+    padding-left : 5px;
+    font-weight : bold;
+    font-size : 12px;
+    padding-bottom : 2px;
+    color : #000000;
+    padding-top : 2px;
+    font-family : arial;
+    }
+    .labelgroupblack {
+    padding-right : 5px;
+    padding-left : 5px;
+    font-weight : bold;
+    font-size : 12px;
+    padding-bottom : 2px;
+    color : #000000;
+    padding-top : 2px;
+    font-family : arial;
+    }
+    .form_tab_on {
+    padding-right : 5px;
+    padding-left : 5px;
+    font-size : 11px;
+    padding-bottom : 0;
+    color : #565e62;
+    padding-top : 0;
+    font-family : verdana;
+    }
+    .form_tab_off {
+    padding-right : 5px;
+    padding-left : 5px;
+    font-weight : bold;
+    font-size : 11px;
+    padding-bottom : 0;
+    color : #ffffff;
+    padding-top : 0;
+    font-family : verdana, helvetica;
+    }
+    .maintext {
+    margin-top : 0;
+    padding-left : 5px;
+    font-size : 11px;
+    margin-left : 0;
+    color : #000000;
+    margin-right : 0;
+    font-family : Arial, Tahoma, Verdana, Helvetica;
+    background-color : #f4f4f4;
+    }
+    .smalltext {
+    margin-top : 0;
+    padding-left : 5px;
+    font-size : 11px;
+    margin-left : 0;
+    color : #000000;
+    margin-right : 0;
+    font-family : Arial, Tahoma, Verdana, Helvetica;
+    }
+    blockquote
+    {
+        
+        PADDING: 5px 5px 5px 5px;
+        MARGIN: 15px 0px 15px;
+        FONT-WEIGHT: normal;
+        FONT-SIZE: 8pt;
+        FONT-FAMILY: Arial, Helvetica;
+        COLOR: #000000;
+        
+    }
+    table.bordertable {
+    border-right : 1px solid #afc2cc;
+    border-top : 1px solid #afc2cc;
+    border-left : 1px solid #afc2cc;
+    border-bottom : 1px solid #afc2cc;
+    font-family : Verdana, Arial;
+    background-color : #ffffff;
+    }
+    table.bordertable TD {
+    padding-right : 5px;
+    padding-left : 5px;
+    font-size : 9pt;
+    padding-bottom : 5px;
+    color : #000000;
+    padding-top : 5px;
+    font-family : Verdana, Arial;
+    }
+    table.bordertable TD.bordertableheader {
+    font-weight : bold;
+    font-size : 8pt;
+    text-transform : uppercase;
+    color : #000000;
+    font-family : Verdana, Arial;
+    background-color : #efeded;
+    }
+    table.grouptable {
+    padding-right : 1px;
+    padding-left : 1px;
+    padding-bottom : 1px;
+    color : #000000;
+    padding-top : 1px;
+    font-family : Arial;
+    }
+    table.grouptable TD {
+    padding-right : 10px;
+    padding-left : 0;
+    font-size : 8pt;
+    padding-bottom : 1px;
+    color : black;
+    padding-top : 3px;
+    font-family : Verdana, Arial;
+    }
+    tr.Highlight td {
+    font-weight : bold;
+    background-color : #ffffdc;
+    }
+    .form_tab_off a {
+    font-weight : bold;
+    font-size : 11px;
+    color : #ffffff;
+    font-family : verdana, helvetica;
+    text-decoration : none;
+    }
+    .form_tab_off a:active {
+    font-weight : bold;
+    font-size : 11px;
+    color : #ffffff;
+    font-family : verdana, helvetica;
+    text-decoration : none;
+    }
+    .form_tab_off a:link {
+    font-weight : bold;
+    font-size : 11px;
+    color : #ffffff;
+    font-family : verdana, helvetica;
+    text-decoration : none;
+    }
+    .form_tab_off a:visited {
+    font-weight : bold;
+    font-size : 11px;
+    color : #ffffff;
+    font-family : verdana, helvetica;
+    text-decoration : none;
+    }
+    .form_tab_off a:hover {
+    font-weight : bold;
+    font-size : 11px;
+    color : #ffffff;
+    font-family : verdana, helvetica;
+    text-decoration : underline;
+    }
+    TD.maintabbg {
+    background-color : #f4f4f4;
+    }
+    .btnSmall {
+    border-right : 1px solid #041c43;
+    border-top : 1px solid #041c43;
+    font-size : 11px;
+    border-left : 1px solid #041c43;
+    color : #ffffff;
+    border-bottom : 1px solid #041c43;
+    font-family : verdana;
+    background-color : #041c43;
+    }
+    .logintext {
+    font-size : 13pt;
+    color : #000000;
+    font-family : Arial, Helvetica;
+    }
+    .btnGo {
+    border-right : medium none;
+    background-position : left top;
+    border-top : medium none;
+    background-image : url(../headerimages/btngo.jpg);
+    border-left : medium none;
+    width : 21pt;
+    border-bottom : medium none;
+    background-repeat : no-repeat;
+    height : 21pt;
+    background-color : transparent;
+    }
+    .category_thumbnail {
+    border-style : solid;
+    border-width : 1px;
+    border-color : black;
+    }
+    .contentArea {
+    width : 100%;
+    padding : 0 0 0 20px;
+    }
+    #orderdetails td {
+    padding-right : 0;
+    padding-left : 0;
+    }
+    #orderdetails td.bordertableheader {
+    padding-left : 10px;
+    height : 25px;
+    }
+    #orderdetails td table td {
+    padding-left : 10px;
+    }
+    #orderdetails td.TextBoxText {
+    padding-left : 10px;
+    }
+    #orderdetails td.TextBoxTextGroup {
+    padding-left : 40px;
+    }
+    #fbFooter {
+    background-color : #000000;
+    color : #ffffff;
+    }
+    .vpdata td {
+    font-size : 12px;
+    font-family : verdana;
+    border-bottom : 1px solid #c6d2de;
+    }
+    .vpdata {
+    font-size : 12px;
+    font-family : verdana;
+    padding : 4px;
+    }
+    .vpdataheader {
+    padding-right : 5px;
+    padding-left : 5px;
+    font-weight : bold;
+    color : #000000;
+    border-bottom : 1px solid #c6d2de;
+    }
+    /************New Master Styles***********/
+    #mastertable {
+    background-color : #ffffff;
+    width : 100%;
+    }
+    #contenttable {
+    width : 85%;
+    margin : 20px;
+    }
+    td.tabStart_on{
+    height:22px;
+    background-image:url(../images/form_tab_start_on.gif);
+    background-repeat:no-repeat;
+    }
+    td.tabStart_off{
+    height:22px;
+    background-image:url(../images/form_tab_start_off.gif);
+    background-repeat:no-repeat;
+    }
+    td.tabEnd_on{
+    width:25px;
+    height:22px;
+    background-image:url(../images/form_tab_end_on.gif);
+    background-repeat:no-repeat;
+    }
+    td.tabEnd_off{
+    width:25px;
+    height:22px;
+    background-image:url(../images/form_tab_end_off.gif);
+    background-repeat:no-repeat;
+    }
+    td.tabTop{
+    width:100%;
+    background-image:url(../images/tbl_haut.gif);
+    background-repeat:repeat-x;
+    }
+    td.form_tab_on{
+    height:22px;
+    padding-left: 15px;
+    background:url(../images/form_tab_bg_on.gif);
+    }
+    td.form_tab_off{
+    height:22px;
+    padding-left: 15px;
+    background-image:url(../images/form_tab_bg_off.gif);
+    }
+    td.formTabBG_on_on{
+    width:25px;
+    background-image:url(../images/form_tab_btw_on_on.gif);
+    background-repeat:no-repeat;
+    }
+    td.formTabBG_on_off{
+    width:25px;
+    background-image:url(../images/form_tab_btw_on_off.gif);
+    background-repeat:no-repeat;
+    }
+    td.formTabBG_off_on{
+    width:25px;
+    background-image:url(../images/form_tab_btw_off_on.gif);
+    background-repeat:no-repeat;
+    }
+    td.formTabBG_off_off{
+    width:25px;
+    background-image:url(../images/form_tab_btw_off_off.gif);
+    background-repeat:no-repeat;
+    }
+    .readCart{
+    width:230px; 
+    margin:0px 0px 10px 0px; 
+    border:1px solid #afc2cc; font-size:11px;
+    font-family : Arial, Helvetica;
+    }
+    .readCart h3{
+    margin:0px;
+    padding:0px;
+    }
+    .readCartHeader{
+    height:20px;
+    padding:5px; 
+    border-bottom:1px solid #afc2cc;
+    }
+    .readCartRow{
+    padding:5px;
+    border-bottom:1px solid #afc2cc;
+    }
+    .readCartSubtotal{
+    text-align:right; 
+    padding:5px; 
+    font-weight:bold;
+    }
+    .readCartButton{
+    text-align:right; 
+    padding:5px;
+    }
+    .croppedImageThumbnail{
+    display: block;
+    max-width:200px;
+    max-height:200px;
+    width: auto;
+    height: auto;
+    }
+    #spnExternalListId{
+    display:none;
+    }
+    
